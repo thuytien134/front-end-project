@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import { Route, Routes } from "react-router-dom";
 import Support from "./Support";
 
-// Look at me, I'm a test!
+// Look at me, I'm a test! Again!
 
 function App() {
   return (
