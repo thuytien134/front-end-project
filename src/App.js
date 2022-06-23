@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SignIn from "./SignIn";
+// import PizzaForm from "./PizzaForm";
+import PizzaList from "./PizzaList";
+import NavBar from "./NavBar";
+import { Route, Routes } from "react-router-dom";
+import Support from "./Support";
+
+// Look at me, I'm a test!
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+    <br/>
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/my-pizza" element={ <PizzaList/> } />       
+        <Route path="/custommer-support" element={<Support />} />
+      </Routes>
+    </>
   );
 }
 
