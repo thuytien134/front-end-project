@@ -8,12 +8,13 @@ function PizzaForm({onAddPizza}) {
 
     function handleSubmit(e) {
         e.preventDefault()
+        e.target.reset()
         const pizzaData = {
             topping: topping,
             size: size,
             vegetarian: isVegetarian
         }
-       
+        
         fetch("https://fast-inlet-56401.herokuapp.com/pizzas", {
             method: "POST",
             headers: {

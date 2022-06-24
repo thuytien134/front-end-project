@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 const linkStyles = {
     borderBottom: "solid 1px",
-    // paddingBottom: "1rem",
 };
 
 function NavBar() {
@@ -30,7 +29,7 @@ function NavBar() {
         Build Your Pizza
       </NavLink> |{" "}
       <NavLink
-        to="/custommer-support"
+        to="/customer-support"
         exact
         style={linkStyles}
         activeStyle={{
