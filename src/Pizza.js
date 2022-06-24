@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Pizza({pizza,onDelete}) { 
 function handleDelete(){
-  fetch(`http://localhost:3000/pizzas/${pizza.id}`,{
+  fetch(`https://fast-inlet-56401.herokuapp.com/pizzas/${pizza.id}`,{
     method:"DELETE",
   })
   .then(r=>r.json())

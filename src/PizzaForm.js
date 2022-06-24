@@ -14,7 +14,7 @@ function PizzaForm({onAddPizza}) {
             vegetarian: isVegetarian
         }
        
-        fetch("http://localhost:3000/pizzas", {
+        fetch("https://fast-inlet-56401.herokuapp.com/pizzas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -56,7 +56,7 @@ function PizzaForm({onAddPizza}) {
                         name="vegetarian"
                         className="mb-2"
                         label="Not Vegetarian"
-                        // onChange={(e)=> setIsvegetarian(e.target.checked)}
+                        
                     />
                 </Col>
                 <Col xs="auto">

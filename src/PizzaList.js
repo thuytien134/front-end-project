@@ -6,7 +6,7 @@ import PizzaForm from "./PizzaForm";
 function PizzaList() {
     const [pizzas, setPizzas] = useState([])
     useEffect(() => {
-        fetch("http://localhost:3000/pizzas")
+        fetch("https://fast-inlet-56401.herokuapp.com/pizzas")
             .then(r => r.json())
             .then(pizzas => setPizzas(pizzas))
     }, [])
