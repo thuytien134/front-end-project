@@ -1,33 +1,38 @@
-import React from "react";
-import { FloatingLabel, Form ,Button} from "react-bootstrap"
-import {Link} from 'react-router-dom'
+import React, { useState } from "react";
+import { FloatingLabel, Form, Button } from "react-bootstrap"
+import { Link, useNavigate } from 'react-router-dom'
 
-function SignIn() {
+function SignIn({setUserName}) {
+  let navigate = useNavigate()
+ 
   return (
     <>
-      <h1 className="text-center" style={{color:'brown', fontFamily:'revert'}}>🍕 Sign In To Your Pizza</h1>
-      <div style={{display:'flex',flexWrap:'wrap',alignItems:'stretch',flexDirection:'column', alignContent:'center'}}>
+      <h1 className="text-center" style={{ color: 'brown', fontFamily: 'revert' }}>🍕 Sign In To Your Pizza</h1>
+      <div
+        style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'stretch', flexDirection: 'column', alignContent: 'center' }}
+      >
         <FloatingLabel
           controlId="floatingInput"
-          label="Email address"
+          label="User Name"
           className="mb-3"
         >
-          <Form.Control 
-          style={{ width: "400px" }}
-           type="email" 
-           placeholder="name@example.com"
-           required />
+          <Form.Control
+            style={{ width: "400px" }}
+            type="text"
+            placeholder="user name"
+            required
+            onChange={(e) => setUserName(e.target.value)} />
         </FloatingLabel>
         <FloatingLabel controlId="floatingPassword" label="Password">
-          <Form.Control 
-          type="password"
-           placeholder="Password"
+          <Form.Control
+            type="password"
+            placeholder="Password"
             style={{ width: "400px" }}
             required />
         </FloatingLabel>
         <Link to="/reset-password">Forgot Password ?</Link>
-        <br/>
-        <Button>Sign In</Button>
+        <br />
+        <Button onClick={() => navigate('/welcome')}>Sign In</Button>
       </div>
     </>
   );
